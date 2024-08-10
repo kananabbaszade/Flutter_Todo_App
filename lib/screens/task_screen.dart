@@ -13,7 +13,7 @@ class TaskScreen extends StatefulWidget {
 
 class _TaskScreenState extends State<TaskScreen> {
   bool isAddingTask = false;
-  bool isListEmpty = true;
+
   bool isAddingSubtask = false;
   final TextEditingController taskController = TextEditingController();
   final TextEditingController subtaskController = TextEditingController();
@@ -41,8 +41,6 @@ class _TaskScreenState extends State<TaskScreen> {
           .addTask(Task(title: taskController.text));
       taskController.clear();
       toggleAddTask();
-    } else {
-      isListEmpty = true;
     }
   }
 
